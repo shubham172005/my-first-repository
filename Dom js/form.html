@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <form action="">
+        <input id="nm" type="text">
+        <input id="em" type="email">
+        <input id="su" type="submit">
+    </form>
+</body>
+<script>
+    let name = document.querySelector('#nm')
+    let gamil = document.querySelector('#em')
+    let btn = document.querySelector('#su')
+    btn.addEventListener('click',(e)=>{
+      e.preventDefault()
+      console.log(name.value);
+      console.log(gamil.value);
+      
+      alert('jai siyaram')
+    })
+
+    // name.addEventListener('keydown',(e)=>{
+    //   console.log(e.target.value);
+      
+    // })
+    name.addEventListener('keyup',(e)=>{
+      console.log(e.target.value);
+    })
+</script>
+</html>

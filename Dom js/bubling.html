@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body{
+            height: 98vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        .box{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            width: 30vw;
+            height: 50%;
+            border: 2px solid;
+            background-color: aquamarine;
+        }
+        .innerbox{
+            width: 50%;
+            height: 50%;
+            border: 2px solid;
+            background-color: salmon;
+
+        }
+    </style>
+</head>
+<body>
+    <h1>Lorem ipsum dolor sit amet consectetur adipisicing elit. Similique accusamus delectus labore veniam vero eligendi dolor praesentium quam et provident, eum aspernatur dicta ut velit quaerat tenetur. Est, molestias consequatur.</h1>
+    <div class="box">
+        <div class="innerbox"></div>
+    </div>
+</body>
+<script>
+    let outerbox = document.querySelector('.box')
+    outerbox.addEventListener('click',(e)=>{
+       outerbox.style.background = '#212121'
+    })
+    let innerbox  = document.querySelector('.innerbox')
+    let change = document.querySelector('h1')
+    innerbox.addEventListener('click',(e)=>{
+        e.stopPropagation()
+       innerbox.style.background = 'teal'
+       change.innerText = 'Jai Siyaram'
+    })
+</script>
+</html>
